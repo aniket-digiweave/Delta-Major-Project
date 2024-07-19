@@ -19,7 +19,6 @@ const listingSchema = new Schema({
     },
     filename: {
       type: String,
-      required: true,
     },
   },
   price: {
@@ -27,7 +26,7 @@ const listingSchema = new Schema({
     set: (v) => (v <= 0 ? 1 : v),
   },
   location: String,
-  countryountry: String,
+  country:String,
 });
 
 const Listing = mongoose.model("Listing", listingSchema);
